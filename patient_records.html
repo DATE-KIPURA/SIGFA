@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pacientes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles2.css">
+    <style>
+        .patient-details {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">SIGFA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="worker_dashboard.html">Dashboard del Trabajador <span class="sr-only">(actual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="support.html">Soporte</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center">Lista de Pacientes</h2>
+
+                <ul class="list-group">
+                    <li class="list-group-item patient-item" data-toggle="collapse" data-target="#patient1" aria-expanded="false" aria-controls="patient1">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Nombre del Paciente 1</h5>
+                            <small>ID: PAC123456</small>
+                        </div>
+                    </li>
+                    <div class="collapse patient-details" id="patient1">
+                        <div class="card card-body">
+                            <p><strong>Edad:</strong> 35 años</p>
+                            <p><strong>Diagnóstico:</strong> Hipertensión arterial</p>
+                            <p><strong>Tratamiento:</strong> Medicamentos y dieta especial</p>
+                            <p><strong>Contacto:</strong> paciente1@example.com | +1234567890</p>
+                            <p><strong>Historial Médico:</strong></p>
+                            <ul>
+                                <li>Visitas anteriores</li>
+                                <li>Resultados de exámenes</li>
+                                <li>Notas de progreso</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <li class="list-group-item patient-item" data-toggle="collapse" data-target="#patient2" aria-expanded="false" aria-controls="patient2">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Nombre del Paciente 2</h5>
+                            <small>ID: PAC654321</small>
+                        </div>
+                    </li>
+                    <div class="collapse patient-details" id="patient2">
+                        <div class="card card-body">
+                            <p><strong>Edad:</strong> 45 años</p>
+                            <p><strong>Diagnóstico:</strong> Diabetes tipo 2</p>
+                            <p><strong>Tratamiento:</strong> Insulina y control de dieta</p>
+                            <p><strong>Contacto:</strong> paciente2@example.com | +9876543210</p>
+                            <p><strong>Historial Médico:</strong></p>
+                            <ul>
+                                <li>Visitas anteriores</li>
+                                <li>Resultados de exámenes</li>
+                                <li>Notas de progreso</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Agregar más pacientes según sea necesario -->
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-5">
+        <p>&copy; 2024 SIGFA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
