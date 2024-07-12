@@ -74,3 +74,32 @@
         }
     }, false);
 })();
+
+function toggleChatBox() {
+    var chatBox = document.getElementById('chatBox');
+    chatBox.classList.toggle('active');
+}
+
+document.getElementById('chatForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var messageInput = this.querySelector('textarea');
+    var message = messageInput.value.trim();
+    
+    if (message !== '') {
+        var chatMessages = document.querySelector('.chat-messages');
+        var userMessage = document.createElement('div');
+        userMessage.className = 'user-message';
+        userMessage.textContent = message;
+        chatMessages.appendChild(userMessage);
+
+        // Simular respuesta del agente después de un pequeño retraso
+        setTimeout(function() {
+            var agentMessage = document.createElement('div');
+            agentMessage.className = 'agent-message';
+            agentMessage.textContent = 'Estamos revisando tu solicitud...';
+            chatMessages.appendChild(agentMessage);
+        }, 1000);
+
+        messageInput.value = '';
+    }
+});
